@@ -76,7 +76,7 @@ public class AltV_Wiki : IScript
 {
     /* We declare &amp; Create our Event Handler. */
     [ScriptEvent(ScriptEventType.WeaponDamage)]
-    public static void WeaponDamage(IPlayer player, IPlayer target, uint weapon, ushort dmg, Position offset, BodyPart bodypart)
+    public static bool WeaponDamage(IPlayer player, IPlayer target, uint weapon, ushort dmg, Position offset, BodyPart bodypart)
     {
 
         /* We Convert the Weapon uint to a regular WeaponModel Enum. */
@@ -104,7 +104,7 @@ public class AltV_Wiki : IScript
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/171d1ed76939ded9f53c6febe3d2fd00dd216865/docs/articles/player_damage.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/ff95575b30970c5f24c04e85b5298e1896322b4e/docs/articles/player_damage.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
