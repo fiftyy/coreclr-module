@@ -152,6 +152,17 @@ namespace AltV.Net
             remove =&gt; Module.ExplosionEventHandler.Remove(value);
         }
 
+        /// &lt;summary&gt;
+        /// Weapon damage event handler
+        /// &lt;example&gt;
+        /// &lt;code&gt;
+        /// Alt.OnWeaponDamage += (player, target, weapon, damage, shotOffset, bodyPart) =&gt; {
+        ///   Console.WriteLine($&quot;{player.Name} got damaged.&quot;);
+        ///   return true; // return false will cancel the weapon damage event and player won't receive damage.
+        /// };
+        /// &lt;/code&gt;
+        /// &lt;/example&gt;
+        /// &lt;/summary&gt;
         public static event WeaponDamageDelegate OnWeaponDamage
         {
             add =&gt; Module.WeaponDamageEventHandler.Add(value);
@@ -249,6 +260,12 @@ namespace AltV.Net
             add =&gt; Module.ColShapeEventHandler.Add(value);
             remove =&gt; Module.ColShapeEventHandler.Remove(value);
         }
+        
+        public static event VehicleDestroyDelegate OnVehicleDestroy
+        {
+            add =&gt; Module.VehicleDestroyEventHandler.Add(value);
+            remove =&gt; Module.VehicleDestroyEventHandler.Remove(value);
+        }
     }
 }
 </code></pre>
@@ -300,11 +317,13 @@ namespace AltV.Net.Events
 
     public delegate void ColShapeDelegate(IColShape colShape, IEntity targetEntity, bool state);
 
-    public delegate void ExplosionDelegate(IPlayer player, ExplosionType explosionType, Position position,
+    public delegate bool ExplosionDelegate(IPlayer player, ExplosionType explosionType, Position position,
         uint explosionFx);
 
     public delegate bool WeaponDamageDelegate(IPlayer player, IEntity target, uint weapon, ushort damage,
         Position shotOffset, BodyPart bodyPart);
+    
+    public delegate void VehicleDestroyDelegate(IVehicle vehicle);
 }
 </code></pre>
 <p>The player event handler looks like this.</p>
@@ -320,7 +339,7 @@ namespace AltV.Net.Events
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/a1df5de6f9ab68b24f7e9730ad71e3303ca81a91/docs/articles/events.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/7038f0e63cb732a897b49e11c583fd8aa25f566a/docs/articles/events.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
