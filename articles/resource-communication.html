@@ -70,7 +70,7 @@
 <h1 id="resource-communication">Resource communication</h1>
 
 <p>This article will describe how to communicate between different server resources.</p>
-<h2 id="exports">Exports</h2>
+<h2 id="export-data">Export data</h2>
 <p>Resources can define data that other resources can access while the resource is starting. This data is immutable after resource finished starting and can be accessed from any serverside resource.</p>
 <pre><code class="lang-cs">public class SampleResource : AsyncResource
 {
@@ -105,7 +105,7 @@ Also any dictionary in dictionary, array in array, ect. endless depth types are 
   }
 }
 </code></pre>
-<h2 id="imports">Imports</h2>
+<h2 id="import-data">Import data</h2>
 <p>Resources can import data that got exported from other resources. Most likely you will define the resource where you import from as <code>deps: [ myResource, myResource2 ]</code> in your <code>resource.cfg</code> to make sure the resource is already started when your resource starts.
 You also have to define the resource name where you import data from.</p>
 <pre><code class="lang-cs">public class SampleResource : AsyncResource
@@ -145,7 +145,7 @@ The server event delegate needs to have to following signature.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/7038f0e63cb732a897b49e11c583fd8aa25f566a/docs/articles/resource-communication.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/357ad55904943876c2f5dc7314f10de4b62f3a22/docs/articles/resource-communication.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
