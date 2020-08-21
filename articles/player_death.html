@@ -69,29 +69,36 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="onplayerdeath">OnPlayerDeath</h1>
 
-<p>Note :</p>
-<h5 id="death-reason-could-be-a-weaponhash-too">Death reason could be a WeaponHash too.</h5>
-<h5 id="events-have-to-be-created-in-a-iscript-class-otherwise-it-wont-work">Events have to be created in a IScript Class! Otherwise it won´t work!</h5>
-<pre><code class="lang-csharp">    /* We create our IScript class */
+<p>This is called when a player dies.</p>
+<p>player: The player that got killed
+killer: The player that killed the player (other player, hisself, null)
+weapon: The weapon that was used or a other reason <a href="https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs">https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs</a></p>
+<h2 id="normal-event-handler">Normal event handler</h2>
+<pre><code class="lang-csharp">Alt.OnPlayerDead += (player, killer, weapon) =&gt; {
+    // ...
+}
+</code></pre>
+<h2 id="iscript-event-handler">IScript event handler</h2>
+<h5 id="note--scriptevents-have-to-be-created-in-a-iscript-class-otherwise-it-wont-work">Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work!</h5>
+<pre><code class="lang-csharp">    // We create our IScript class
     public class AltV_Wiki : IScript
     {
-        /* We Declare &amp; Create our Event handler. */
+        // We declare and create our event handler
         [ScriptEvent(ScriptEventType.PlayerDead)]
-        public static void OnPlayerDeath(IPlayer player, IPlayer killer, uint reason)
+        public static void OnPlayerDeath(IPlayer player, IPlayer killer, uint weapon)
         {
-            /* If you killed yourself then it should notify you. */
+            // If you killed yourself then it should notify you
             if (killer == player) {
-                player.SendChatMessage(&quot;You killed yourself... :(&quot;);
+                player.SendChatMessage(&quot;You killed yourself&quot;);
             }
             else
             {
-                /* We Notify the Killer &amp; the Player. */
+                // We notify the killer and the player.
                 killer.SendChatMessage(&quot;You killed &quot; + player.Name);
                 player.SendChatMessage(killer?.Name + &quot; killed you!&quot;);
             }
-            /* We Spawn the dead player after 1000 MS */
-            /* ( 1 Second = 1000 MS ). */
-            player.Spawn(new Position(0, 0, 0), 1000);
+            // We spawn the dead player after 1000ms at (0, 0, 72)
+            player.Spawn(new Position(0, 0, 72), 1000);
         }
     }
 </code></pre>
@@ -103,7 +110,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/15ff4b845f677f78e60b8acd0abdb56c1b90bfff/docs/articles/player_death.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/6e2d90992988eb6be56f47aa23fcff5c3f91825f/docs/articles/player_death.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
