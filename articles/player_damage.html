@@ -69,27 +69,34 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="weapondamage">WeaponDamage</h1>
 
+<h2 id="normal-event-handler">Normal event handler</h2>
+<pre><code class="lang-csharp">Alt.OnWeaponDamage += (player, target, weapon, damage, offset, bodypart) =&gt; {
+    // ...
+    return true; // return false will cancel the event and player won't receive damage.
+}
+</code></pre>
+<h2 id="iscript-event-hanlder">IScript event hanlder</h2>
 <p>This event will be called if a player do any damage by a Weapon to a other player.</p>
-<h5 id="note--events-have-to-be-created-in-a-iscript-class-otherwise-it-wont-work">Note : Events have to be created in a IScript Class! Otherwise it won´t work!</h5>
-<pre><code class="lang-csharp">/* We create our IScript class */
+<h5 id="note--scriptevents-have-to-be-created-in-a-iscript-class-otherwise-it-wont-work">Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work!</h5>
+<pre><code class="lang-csharp">// We create our IScript class
 public class AltV_Wiki : IScript
 {
-    /* We declare &amp; Create our Event Handler. */
+    // We declare &amp; create our event handler
     [ScriptEvent(ScriptEventType.WeaponDamage)]
-    public static bool WeaponDamage(IPlayer player, IPlayer target, uint weapon, ushort dmg, Position offset, BodyPart bodypart)
+    public static bool WeaponDamage(IPlayer player, IEntity target, uint weapon, ushort damage, Position offset, BodyPart bodypart)
     {
+        // We convert the weapon uint to a regular WeaponModel enum
+        AltV.Net.Enums.WeaponModel weaponModel = (AltV.Net.Enums.WeaponModel) weapon;
+        if (target is IPlayer targetPlayer) {
+            player?.SendChatMessage(&quot;You hitted &quot; + targetPlayer?.Name + &quot; and gave him &quot; + damage + &quot; damage! Weapon: &quot; + weaponModel);
+            targetPlayer?.SendChatMessage(player?.Name + &quot; hitted you and gave you &quot; + damage + &quot; damage! Weapon: &quot; + weaponModel);
 
-        /* We Convert the Weapon uint to a regular WeaponModel Enum. */
-        AltV.Net.Enums.WeaponModel weaponModel = (AltV.Net.Enums.WeaponModel)weapon;
-        /* We notify the player. */
-        player?.SendChatMessage(&quot;You hitted &quot; + target?.Name + &quot; and gave him &quot; + dmg + &quot; damage! Weapon: &quot; + weaponModel);
-        target?.SendChatMessage(player?.Name + &quot; hitted you and gave you &quot; + dmg + &quot; damage! Weapon: &quot; + weaponModel);
-
-        /* We check if the BodyPart is his Pelvis ... */
-        if (bodypart == BodyPart.Pelvis)
-        {
-            player?.SendChatMessage(&quot;You hitted a Player in his Pelvis! Why you did that ?!&quot;);
-            target?.SendChatMessage(&quot;You got hitted by a &quot; + weaponModel + &quot; in your Pelvis :(&quot;);
+            // We check if the hitted body part was the head
+            if (bodypart == BodyPart.Head)
+            {
+                player?.SendChatMessage(&quot;You hitted a Player in &quot; + bodypart);
+                targetPlayer?.SendChatMessage(&quot;You got hitted by a &quot; + weaponModel + &quot; in &quot; + bodypart);
+            }
         }
         
         return true; // return false will cancel the event and player won't receive damage.
@@ -104,7 +111,7 @@ public class AltV_Wiki : IScript
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/357ad55904943876c2f5dc7314f10de4b62f3a22/docs/articles/player_damage.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/15ff4b845f677f78e60b8acd0abdb56c1b90bfff/docs/articles/player_damage.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
