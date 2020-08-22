@@ -3189,6 +3189,11 @@
     "title": "GiveWeapon",
     "keywords": "GiveWeapon Gives a player a Weapon. Note : Event handler have to be Created in a IScript Class! Otherwise it won´t work. /* We create our IScript class */ public class AltV_Wiki : IScript { /* We declare & Create our Event Handler. */ [ScriptEvent(ScriptEventType.PlayerConnect)] public void OnPlayerConnect(IPlayer player, string reason) { //We spawn our Connected Client after 1 sec. client.Spawn(new Position(0, 0, 72)); // We set his Skin to the standard GTA Online Skin. client.Model = Alt.Hash(\"FreemodeMale01\"); // We give our Connected Player a Advanced Rifle with 90 Bullets! He should select his new Weapon Instantly. player.GiveWeapon(AltV.Net.Enums.WeaponModel.AdvancedRifle, 90, true); } } Syntax //Parameter : (WeaponModel weaponModel, int ammo, bool selectWeapon) player.GiveWeapon(AltV.Net.Enums.WeaponModel.AdvancedRifle, 90, true);"
   },
+  "articles/player_weapon_change.html": {
+    "href": "articles/player_weapon_change.html",
+    "title": "PlayerWeaponChange",
+    "keywords": "PlayerWeaponChange The player weapon change event gets called when the player weapon changed. Parameter Description player The player that got his weapons changed oldweapon The weapon that was used https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Enums/WeaponModel.cs newWeapon The weapon that was used https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Enums/WeaponModel.cs Normal event handler Alt.OnPlayerWeaponChange += (player, oldWeapon, newWeapon) => { return true; // return false if you wanna cancel it. } IScript event handler // We create our IScript class public class MyScriptClass : IScript { // We declare and create our event handler. [ScriptEvent(ScriptEventType.PlayerWeaponChange)] public bool OnPlayerWeaponChange(IPlayer player, uint oldWeapon, uint newWeapon) { // We notify the player that he changed his weapon. player.SendChatMessage(\"You changed your Weapon from \" + (WeaponModel)oldWeapon + \" to \" + (WeaponModel)newWeapon); return true; // return false if you wanna cancel it. } }"
+  },
   "articles/player-communication.html": {
     "href": "articles/player-communication.html",
     "title": "Player communication",
