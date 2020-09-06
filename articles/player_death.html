@@ -95,13 +95,17 @@
 <td>The player that got killed</td>
 </tr>
 <tr>
+<td>entity</td>
+<td>The entity who killed the player</td>
+</tr>
+<tr>
 <td>weapon</td>
 <td>The weapon that was used or a other reason <a href="https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs">https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="normal-event-handler">Normal event handler</h2>
-<pre><code class="lang-csharp">Alt.OnPlayerDead += (player, killer, weapon) =&gt; {
+<pre><code class="lang-csharp">Alt.OnPlayerDead += (player, entity, weapon) =&gt; {
     // ...
 }
 </code></pre>
@@ -112,8 +116,10 @@
     {
         // We declare and create our event handler
         [ScriptEvent(ScriptEventType.PlayerDead)]
-        public static void OnPlayerDead(IPlayer player, IPlayer killer, uint weapon)
+        public static void OnPlayerDead(IPlayer player, IEntity entity, uint weapon)
         {
+            // Event will be called only if the killer is a player.
+            if (!(entity is IPlayer killer)) return;
             // If you killed yourself then it should notify you
             if (killer == player) {
                 player.SendChatMessage(&quot;You killed yourself&quot;);
