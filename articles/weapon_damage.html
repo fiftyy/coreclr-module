@@ -81,6 +81,29 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="weapondamage">WeaponDamage</h1>
 
+<p>This is called everytime a player deals damage to another entity with a weapon.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>player</td>
+<td>The player that got killed</td>
+</tr>
+<tr>
+<td>target</td>
+<td>The target who got hitted by a Player</td>
+</tr>
+<tr>
+<td>weapon</td>
+<td>The weapon that was used or a other reason <a href="https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs">https://github.com/FabianTerhorst/coreclr-module/blob/master/api/AltV.Net/Data/Weapons.cs</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="normal-event-handler">Normal event handler</h2>
 <pre><code class="lang-csharp">Alt.OnWeaponDamage += (player, target, weapon, damage, offset, bodypart) =&gt; {
     // ...
@@ -91,13 +114,13 @@
 <p>This event will be called if a player do any damage by a Weapon to a other player.</p>
 <h5 id="note--scriptevents-have-to-be-created-in-a-iscript-class-otherwise-it-wont-work">Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work!</h5>
 <pre><code class="lang-csharp">// We create our IScript class
-public class AltV_Wiki : IScript
+public class MyScriptClass : IScript
 {
-    // We declare &amp; create our event handler
+    // We declare and create our event handler
     [ScriptEvent(ScriptEventType.WeaponDamage)]
     public static bool WeaponDamage(IPlayer player, IEntity target, uint weapon, ushort damage, Position offset, BodyPart bodypart)
     {
-        // We convert the weapon uint to a regular WeaponModel enum
+        // We convert the weapon uint to a regular weaponmodel enum
         AltV.Net.Enums.WeaponModel weaponModel = (AltV.Net.Enums.WeaponModel) weapon;
         if (target is IPlayer targetPlayer) {
             player?.SendChatMessage(&quot;You hitted &quot; + targetPlayer?.Name + &quot; and gave him &quot; + damage + &quot; damage! Weapon: &quot; + weaponModel);

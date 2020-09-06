@@ -95,8 +95,8 @@
 <td>The player that got killed</td>
 </tr>
 <tr>
-<td>entity</td>
-<td>The entity who killed the player</td>
+<td>killer</td>
+<td>The killer who killed the player</td>
 </tr>
 <tr>
 <td>weapon</td>
@@ -105,7 +105,7 @@
 </tbody>
 </table>
 <h2 id="normal-event-handler">Normal event handler</h2>
-<pre><code class="lang-csharp">Alt.OnPlayerDead += (player, entity, weapon) =&gt; {
+<pre><code class="lang-csharp">Alt.OnPlayerDead += (player, killer, weapon) =&gt; {
     // ...
 }
 </code></pre>
@@ -116,19 +116,22 @@
     {
         // We declare and create our event handler
         [ScriptEvent(ScriptEventType.PlayerDead)]
-        public static void OnPlayerDead(IPlayer player, IEntity entity, uint weapon)
+        public static void OnPlayerDead(IPlayer player, IEntity killer, uint weapon)
         {
-            // Event will be called only if the killer is a player.
-            if (!(entity is IPlayer killer)) return;
-            // If you killed yourself then it should notify you
-            if (killer == player) {
-                player.SendChatMessage(&quot;You killed yourself&quot;);
+            if ((killer is IPlayer killerPlayer)){
+                // If you killed yourself then it should notify you
+                if (killerPlayer == player) {
+                    player.SendChatMessage(&quot;You killed yourself&quot;);
+                }
+                else
+                {
+                    // We notify the killer and the player.
+                    killerPlayer.SendChatMessage(&quot;You killed &quot; + player.Name);
+                    player.SendChatMessage(killerPlayer?.Name + &quot; killed you!&quot;);
+                }
             }
-            else
-            {
-                // We notify the killer and the player.
-                killer.SendChatMessage(&quot;You killed &quot; + player.Name);
-                player.SendChatMessage(killer?.Name + &quot; killed you!&quot;);
+            else if((killer is IVehicle vehicle)){
+                player.SendChatMessage(&quot;You got killed by a &quot; + (VehicleModel)vehicle.model);
             }
             // We spawn the dead player after 1000ms at (0, 0, 72)
             player.Spawn(new Position(0, 0, 72), 1000);
