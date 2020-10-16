@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PlayerConnect event </title>
+    <title>Player connect event </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PlayerConnect event ">
+    <meta name="title" content="Player connect event ">
     <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -79,11 +79,27 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="playerconnect-event">PlayerConnect event</h1>
+<h1 id="player-connect-event">Player connect event</h1>
 
-<p>This event will be called on a player connect.</p>
-<p>player: the player that connected
-reason: null for now, might contain favorites, masterlist, directconnect in the future</p>
+<p>This is called when a player connects.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>player</td>
+<td>The player that connected</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>The reason with that the player connected</td>
+</tr>
+</tbody>
+</table>
 <h2 id="normal-event-handler">Normal event handler</h2>
 <pre><code class="lang-csharp">Alt.OnPlayerConnect += (player, reason) =&gt; {
     // ...
