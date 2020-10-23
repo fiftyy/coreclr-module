@@ -2,6 +2,7 @@
 <!--[if IE]><![endif]-->
 <html>
   
+  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,74 +14,96 @@
     <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/discord.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/main-alt.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+
+  <body>
+        <div class="top-navbar">
+
+            <a href="javascript:void(0);" class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="24" height="24" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../logo.svg" alt="" class="logomark">
+              <span class="brand-title"></span>
+            </a>
+        </div>
+
+        <div class="body-content">
+
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+
+                <div class="sidebar">
+                    
+                    
+                    
+                    
+                    <div>
+                      
+                      <a class="brand" href="../index.html">
+                        <img src="../logo.svg" alt="" class="logomark">
+                        <span class="brand-title"></span>
+                      </a>
+                      <div id="navbar">
+                    
+                      </div>
+                    
+                    </div>
+
+
+                    <div class="sidebar-item-separator"></div>
+
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+
                 </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
-          <ul id="pagination"></ul>
-        </div>
-      </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="AltV.Net.Example.SampleScript">
+
+                <div class="footer">
+                  
+                  <span>Generated by <strong>DocFX</strong></span>
+                </div>
+            </nav>
+
+            <main class="main-panel">
+
+                <div>
+                  
+                  <div id="search-results">
+                    <div class="search-list"></div>
+                    <div class="sr-items">
+                      <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+                    </div>
+                    <ul id="pagination"></ul>
+                  </div>
+                </div>
+
+                <div role="main" class="hide-when-search">
+
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="AltV.Net.Example.SampleScript">
   
   
   <h1 id="AltV_Net_Example_SampleScript" data-uid="AltV.Net.Example.SampleScript" class="text-break">Class SampleScript
@@ -109,7 +132,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_Checkpoint_AltV_Net_Elements_Entities_ICheckpoint_AltV_Net_Elements_Entities_IEntity_System_Boolean_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.Checkpoint(AltV.Net.Elements.Entities.ICheckpoint%2CAltV.Net.Elements.Entities.IEntity%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L12">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L12">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_Checkpoint_" data-uid="AltV.Net.Example.SampleScript.Checkpoint*"></a>
   <h4 id="AltV_Net_Example_SampleScript_Checkpoint_AltV_Net_Elements_Entities_ICheckpoint_AltV_Net_Elements_Entities_IEntity_System_Boolean_" data-uid="AltV.Net.Example.SampleScript.Checkpoint(AltV.Net.Elements.Entities.ICheckpoint,AltV.Net.Elements.Entities.IEntity,System.Boolean)">Checkpoint(ICheckpoint, IEntity, Boolean)</h4>
@@ -166,7 +189,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_ColShape_AltV_Net_Elements_Entities_IColShape_AltV_Net_Elements_Entities_IEntity_System_Boolean_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.ColShape(AltV.Net.Elements.Entities.IColShape%2CAltV.Net.Elements.Entities.IEntity%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L19">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L19">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_ColShape_" data-uid="AltV.Net.Example.SampleScript.ColShape*"></a>
   <h4 id="AltV_Net_Example_SampleScript_ColShape_AltV_Net_Elements_Entities_IColShape_AltV_Net_Elements_Entities_IEntity_System_Boolean_" data-uid="AltV.Net.Example.SampleScript.ColShape(AltV.Net.Elements.Entities.IColShape,AltV.Net.Elements.Entities.IEntity,System.Boolean)">ColShape(IColShape, IEntity, Boolean)</h4>
@@ -223,7 +246,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_DefaultParamsCommand_AltV_Net_Elements_Entities_IPlayer_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.DefaultParamsCommand(AltV.Net.Elements.Entities.IPlayer%2CSystem.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L67">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L67">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_DefaultParamsCommand_" data-uid="AltV.Net.Example.SampleScript.DefaultParamsCommand*"></a>
   <h4 id="AltV_Net_Example_SampleScript_DefaultParamsCommand_AltV_Net_Elements_Entities_IPlayer_System_String_System_Int32_System_Int32_" data-uid="AltV.Net.Example.SampleScript.DefaultParamsCommand(AltV.Net.Elements.Entities.IPlayer,System.String,System.Int32,System.Int32)">DefaultParamsCommand(IPlayer, String, Int32, Int32)</h4>
@@ -270,7 +293,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommand_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_String___.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommand(AltV.Net.Elements.Entities.IPlayer%2CSystem.Int32%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L37">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L37">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommand_" data-uid="AltV.Net.Example.SampleScript.MyCommand*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommand_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_String___" data-uid="AltV.Net.Example.SampleScript.MyCommand(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String[])">MyCommand(IPlayer, Int32, String[])</h4>
@@ -312,7 +335,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommand_AltV_Net_Elements_Entities_IPlayer_System_String_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommand(AltV.Net.Elements.Entities.IPlayer%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L26">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L26">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommand_" data-uid="AltV.Net.Example.SampleScript.MyCommand*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommand_AltV_Net_Elements_Entities_IPlayer_System_String_" data-uid="AltV.Net.Example.SampleScript.MyCommand(AltV.Net.Elements.Entities.IPlayer,System.String)">MyCommand(IPlayer, String)</h4>
@@ -349,7 +372,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommand2_AltV_Net_Elements_Entities_IPlayer_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommand2(AltV.Net.Elements.Entities.IPlayer%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L31">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L31">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommand2_" data-uid="AltV.Net.Example.SampleScript.MyCommand2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommand2_AltV_Net_Elements_Entities_IPlayer_System_Nullable_System_Int32__" data-uid="AltV.Net.Example.SampleScript.MyCommand2(AltV.Net.Elements.Entities.IPlayer,System.Nullable{System.Int32})">MyCommand2(IPlayer, Nullable&lt;Int32&gt;)</h4>
@@ -386,7 +409,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommand2_AltV_Net_Elements_Entities_IPlayer_System_String_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommand2(AltV.Net.Elements.Entities.IPlayer%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L43">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L43">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommand2_" data-uid="AltV.Net.Example.SampleScript.MyCommand2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommand2_AltV_Net_Elements_Entities_IPlayer_System_String_" data-uid="AltV.Net.Example.SampleScript.MyCommand2(AltV.Net.Elements.Entities.IPlayer,System.String)">MyCommand2(IPlayer, String)</h4>
@@ -423,7 +446,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommandNotFoundHandler_AltV_Net_Elements_Entities_IPlayer_System_String_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommandNotFoundHandler(AltV.Net.Elements.Entities.IPlayer%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L49">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L49">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommandNotFoundHandler_" data-uid="AltV.Net.Example.SampleScript.MyCommandNotFoundHandler*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommandNotFoundHandler_AltV_Net_Elements_Entities_IPlayer_System_String_" data-uid="AltV.Net.Example.SampleScript.MyCommandNotFoundHandler(AltV.Net.Elements.Entities.IPlayer,System.String)">MyCommandNotFoundHandler(IPlayer, String)</h4>
@@ -460,7 +483,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_Int32_System_String___.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs(AltV.Net.Elements.Entities.IPlayer%2CSystem.Int32%2CSystem.Int32%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L55">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L55">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs_" data-uid="AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_Int32_System_String___" data-uid="AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32,System.String[])">MyCommandWithDynamicArgs(IPlayer, Int32, Int32, String[])</h4>
@@ -507,7 +530,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs2_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_Nullable_System_Int32__System_String___.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs2(AltV.Net.Elements.Entities.IPlayer%2CSystem.Int32%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L61">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L61">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs2_" data-uid="AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyCommandWithDynamicArgs2_AltV_Net_Elements_Entities_IPlayer_System_Int32_System_Nullable_System_Int32__System_String___" data-uid="AltV.Net.Example.SampleScript.MyCommandWithDynamicArgs2(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Nullable{System.Int32},System.String[])">MyCommandWithDynamicArgs2(IPlayer, Int32, Nullable&lt;Int32&gt;, String[])</h4>
@@ -554,7 +577,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyEvent_AltV_Net_Elements_Entities_IPlayer_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyEvent(AltV.Net.Elements.Entities.IPlayer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L73">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L73">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyEvent_" data-uid="AltV.Net.Example.SampleScript.MyEvent*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyEvent_AltV_Net_Elements_Entities_IPlayer_" data-uid="AltV.Net.Example.SampleScript.MyEvent(AltV.Net.Elements.Entities.IPlayer)">MyEvent(IPlayer)</h4>
@@ -586,7 +609,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyEvent2_AltV_Net_Elements_Entities_IPlayer_AltV_Net_Elements_Entities_IEntity_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyEvent2(AltV.Net.Elements.Entities.IPlayer%2CAltV.Net.Elements.Entities.IEntity)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L78">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L78">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyEvent2_" data-uid="AltV.Net.Example.SampleScript.MyEvent2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyEvent2_AltV_Net_Elements_Entities_IPlayer_AltV_Net_Elements_Entities_IEntity_" data-uid="AltV.Net.Example.SampleScript.MyEvent2(AltV.Net.Elements.Entities.IPlayer,AltV.Net.Elements.Entities.IEntity)">MyEvent2(IPlayer, IEntity)</h4>
@@ -623,7 +646,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyEventName_System_String_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyEventName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L84">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L84">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyEventName_" data-uid="AltV.Net.Example.SampleScript.MyEventName*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyEventName_System_String_" data-uid="AltV.Net.Example.SampleScript.MyEventName(System.String)">MyEventName(String)</h4>
@@ -655,7 +678,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyPlayerConnect_AltV_Net_Elements_Entities_IPlayer_System_String_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyPlayerConnect(AltV.Net.Elements.Entities.IPlayer%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L96">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L96">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyPlayerConnect_" data-uid="AltV.Net.Example.SampleScript.MyPlayerConnect*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyPlayerConnect_AltV_Net_Elements_Entities_IPlayer_System_String_" data-uid="AltV.Net.Example.SampleScript.MyPlayerConnect(AltV.Net.Elements.Entities.IPlayer,System.String)">MyPlayerConnect(IPlayer, String)</h4>
@@ -692,7 +715,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_MyServerEvent_System_String_System_Object___.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.MyServerEvent(System.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L104">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L104">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_MyServerEvent_" data-uid="AltV.Net.Example.SampleScript.MyServerEvent*"></a>
   <h4 id="AltV_Net_Example_SampleScript_MyServerEvent_System_String_System_Object___" data-uid="AltV.Net.Example.SampleScript.MyServerEvent(System.String,System.Object[])">MyServerEvent(String, Object[])</h4>
@@ -729,7 +752,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemove_AltV_Net_Elements_Entities_IVehicle_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemove(AltV.Net.Elements.Entities.IVehicle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L110">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L110">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemove_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemove_AltV_Net_Elements_Entities_IVehicle_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove(AltV.Net.Elements.Entities.IVehicle)">VehicleRemove(IVehicle)</h4>
@@ -761,7 +784,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemove2_AltV_Net_Example_IMyVehicle_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemove2(AltV.Net.Example.IMyVehicle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L116">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L116">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemove2_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemove2_AltV_Net_Example_IMyVehicle_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove2(AltV.Net.Example.IMyVehicle)">VehicleRemove2(IMyVehicle)</h4>
@@ -793,7 +816,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemove2Async_AltV_Net_Example_IMyVehicle_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemove2Async(AltV.Net.Example.IMyVehicle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L140">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L140">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemove2Async_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove2Async*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemove2Async_AltV_Net_Example_IMyVehicle_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove2Async(AltV.Net.Example.IMyVehicle)">VehicleRemove2Async(IMyVehicle)</h4>
@@ -840,7 +863,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemove3_AltV_Net_Example_MyVehicle_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemove3(AltV.Net.Example.MyVehicle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L122">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L122">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemove3_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove3*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemove3_AltV_Net_Example_MyVehicle_" data-uid="AltV.Net.Example.SampleScript.VehicleRemove3(AltV.Net.Example.MyVehicle)">VehicleRemove3(MyVehicle)</h4>
@@ -872,7 +895,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature_AltV_Net_Example_MyPlayer_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature(AltV.Net.Example.MyPlayer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L128">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L128">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature_" data-uid="AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature_AltV_Net_Example_MyPlayer_" data-uid="AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature(AltV.Net.Example.MyPlayer)">VehicleRemoveInvalidMethodSignature(MyPlayer)</h4>
@@ -904,7 +927,7 @@
     <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature2_AltV_Net_Example_IMyInvalidVehicle_.md&amp;value=---%0Auid%3A%20AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature2(AltV.Net.Example.IMyInvalidVehicle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/5bc85998c0fee448605884d42b120e176ffe01f0/api/AltV.Net.Example/SampleScript.cs/#L134">View Source</a>
+    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/1e6f9c231a62cb02eb210261973235d181b35425/api/AltV.Net.Example/SampleScript.cs/#L134">View Source</a>
   </span>
   <a id="AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature2_" data-uid="AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature2*"></a>
   <h4 id="AltV_Net_Example_SampleScript_VehicleRemoveInvalidMethodSignature2_AltV_Net_Example_IMyInvalidVehicle_" data-uid="AltV.Net.Example.SampleScript.VehicleRemoveInvalidMethodSignature2(AltV.Net.Example.IMyInvalidVehicle)">VehicleRemoveInvalidMethodSignature2(IMyInvalidVehicle)</h4>
@@ -936,26 +959,22 @@
       <a class="xref" href="AltV.Net.IScript.html">IScript</a>
   </div>
 </article>
-          </div>
+              
+                </div>
+            </main>
         </div>
-      </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
-  </body>
+
+        
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+<script type="text/javascript" src="../styles/url.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script type="text/javascript" src="../styles/docfx.js"></script>
+<script type="text/javascript" src="../styles/main.js"></script>
+
+    </body>
+
 </html>
