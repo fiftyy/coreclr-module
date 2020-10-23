@@ -91,7 +91,7 @@
   <h6><strong>Assembly</strong>: AltV.Net.dll</h6>
   <h5 id="AltV_Net_Events_ExplosionDelegate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate bool ExplosionDelegate(IPlayer player, ExplosionType explosionType, Position position, uint explosionFx);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate bool ExplosionDelegate(IPlayer player, ExplosionType explosionType, Position position, uint explosionFx, IEntity targetEntity);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,6 +121,11 @@
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">explosionFx</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AltV.Net.Elements.Entities.IEntity.html">IEntity</a></td>
+        <td><span class="parametername">targetEntity</span></td>
         <td></td>
       </tr>
     </tbody>

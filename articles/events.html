@@ -272,11 +272,29 @@ namespace AltV.Net
             add =&gt; Module.ColShapeEventHandler.Add(value);
             remove =&gt; Module.ColShapeEventHandler.Remove(value);
         }
-        
+
         public static event VehicleDestroyDelegate OnVehicleDestroy
         {
             add =&gt; Module.VehicleDestroyEventHandler.Add(value);
             remove =&gt; Module.VehicleDestroyEventHandler.Remove(value);
+        }
+
+        public static event FireDelegate OnFire
+        {
+            add =&gt; Module.FireEventHandler.Add(value);
+            remove =&gt; Module.FireEventHandler.Remove(value);
+        }
+
+        public static event StartProjectileDelegate OnStartProjectile
+        {
+            add =&gt; Module.StartProjectileEventHandler.Add(value);
+            remove =&gt; Module.StartProjectileEventHandler.Remove(value);
+        }
+
+        public static event PlayerWeaponChangeDelegate OnPlayerWeaponChange
+        {
+            add =&gt; Module.PlayerWeaponChangeEventHandler.Add(value);
+            remove =&gt; Module.PlayerWeaponChangeEventHandler.Remove(value);
         }
     }
 }
@@ -330,12 +348,18 @@ namespace AltV.Net.Events
     public delegate void ColShapeDelegate(IColShape colShape, IEntity targetEntity, bool state);
 
     public delegate bool ExplosionDelegate(IPlayer player, ExplosionType explosionType, Position position,
-        uint explosionFx);
+        uint explosionFx, IEntity targetEntity);
 
     public delegate bool WeaponDamageDelegate(IPlayer player, IEntity target, uint weapon, ushort damage,
         Position shotOffset, BodyPart bodyPart);
     
     public delegate void VehicleDestroyDelegate(IVehicle vehicle);
+    
+    public delegate bool FireDelegate(IPlayer player, FireInfo[] fireInfos);
+    
+    public delegate bool StartProjectileDelegate(IPlayer player, Position startPosition, Position direction, uint ammoHash, uint weaponHash);
+    
+    public delegate bool PlayerWeaponChangeDelegate(IPlayer player, uint oldWeapon, uint newWeapon);
 }
 </code></pre>
 <p>The player event handler looks like this.</p>
