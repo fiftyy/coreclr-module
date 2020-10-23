@@ -3174,6 +3174,11 @@
     "title": "Player disconnect event",
     "keywords": "Player disconnect event This is called when a player disconnects. Parameter Description player The player that disconnected reason The reason with that the player disconnected Normal event handler Alt.OnPlayerDisconnect += (player, reason) => { // ... } IScript event handler Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work! // We create our IScript class public class MyIScriptClass : IScript { // We declare and create our event handler [ScriptEvent(ScriptEventType.PlayerDisconnect)] public void OnPlayerDisconnect(IPlayer player, string reason) { // We loop through every player on our server and notify them foreach(IPlayer players in Alt.GetAllPlayers()) { // We notify everyone that our Client has joined the Server players.SendChatMessage(player.Name + \" has left the Server.\"); } } }"
   },
+  "articles/player_enter_vehicle.html": {
+    "href": "articles/player_enter_vehicle.html",
+    "title": "Player enter vehicle event",
+    "keywords": "Player enter vehicle event This is called when a player enters a vehicle. Parameter Description vehicle The vehicle that the player entered player The player who is entering a vehicle seat The seat where the player entered Normal event handler Alt.OnPlayerEnterVehicle += (vehicle, player, seat) => { // ... } IScript event handler Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work! // We create our IScript class public class MyScriptClass : IScript { // We declare and create our event handler [ScriptEvent(ScriptEventType.PlayerEnterVehicle)] public static void OnPlayerEnterVehicle(IVehicle vehicle, IPlayer player, byte seat) { // Simple output. player?.SendChatMessage(\"Damn \" + player.Name + \"... you've entered a \" + (VehicleModel)vehicle?.Model); } }"
+  },
   "articles/player_events.html": {
     "href": "articles/player_events.html",
     "title": "Player Events",
@@ -3183,6 +3188,11 @@
     "href": "articles/player_giveweapon.html",
     "title": "GiveWeapon",
     "keywords": "GiveWeapon Gives a player a Weapon. Note : Event handler have to be Created in a IScript Class! Otherwise it won´t work. /* We create our IScript class */ public class AltV_Wiki : IScript { /* We declare & Create our Event Handler. */ [ScriptEvent(ScriptEventType.PlayerConnect)] public void OnPlayerConnect(IPlayer player, string reason) { //We spawn our Connected Client after 1 sec. client.Spawn(new Position(0, 0, 72)); // We set his Skin to the standard GTA Online Skin. client.Model = Alt.Hash(\"FreemodeMale01\"); // We give our Connected Player a Advanced Rifle with 90 Bullets! He should select his new Weapon Instantly. player.GiveWeapon(AltV.Net.Enums.WeaponModel.AdvancedRifle, 90, true); } } Syntax //Parameter : (WeaponModel weaponModel, int ammo, bool selectWeapon) player.GiveWeapon(AltV.Net.Enums.WeaponModel.AdvancedRifle, 90, true);"
+  },
+  "articles/player_leave_vehicle.html": {
+    "href": "articles/player_leave_vehicle.html",
+    "title": "Player leave vehicle event",
+    "keywords": "Player leave vehicle event This is called when a player leaves a vehicle. Parameter Description vehicle The vehicle that the player left player The player who is leaving his current vehicle seat The seat where the player left Normal event handler Alt.OnPlayerLeaveVehicle += (vehicle, player, seat) => { // ... } IScript event handler Note : ScriptEvents have to be created in a IScript Class! Otherwise it won´t work! // We create our IScript class public class MyScriptClass : IScript { // We declare and create our event handler [ScriptEvent(ScriptEventType.PlayerLeaveVehicle)] public static void OnPlayerLeaveVehicle(IVehicle vehicle, IPlayer player, byte seat) { // Simple output. player?.SendChatMessage(\"Damn \" + player.Name + \"... you've left your awesome \" + (VehicleModel)vehicle?.Model); } }"
   },
   "articles/player_weapon_change.html": {
     "href": "articles/player_weapon_change.html",
