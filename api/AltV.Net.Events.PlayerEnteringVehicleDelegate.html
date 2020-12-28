@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct Host.UnloadArgs
+    <title>Delegate PlayerEnteringVehicleDelegate
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct Host.UnloadArgs
+    <meta name="title" content="Delegate PlayerEnteringVehicleDelegate
    ">
     <meta name="generator" content="docfx 2.51.0.0">
     
@@ -68,75 +68,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AltV.Net.Host.Host.UnloadArgs">
+            <article class="content wrap" id="_content" data-uid="AltV.Net.Events.PlayerEnteringVehicleDelegate">
   
   
-  <h1 id="AltV_Net_Host_Host_UnloadArgs" data-uid="AltV.Net.Host.Host.UnloadArgs" class="text-break">Struct Host.UnloadArgs
+  <h1 id="AltV_Net_Events_PlayerEnteringVehicleDelegate" data-uid="AltV.Net.Events.PlayerEnteringVehicleDelegate" class="text-break">Delegate PlayerEnteringVehicleDelegate
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="AltV.Net.Host.html">AltV.Net.Host</a></h6>
-  <h6><strong>Assembly</strong>: AltV.Net.Host.dll</h6>
-  <h5 id="AltV_Net_Host_Host_UnloadArgs_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AltV.Net.Events.html">AltV.Net.Events</a></h6>
+  <h6><strong>Assembly</strong>: AltV.Net.dll</h6>
+  <h5 id="AltV_Net_Events_PlayerEnteringVehicleDelegate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct UnloadArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void PlayerEnteringVehicleDelegate(IVehicle vehicle, IPlayer player, byte seat);</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Host_Host_UnloadArgs_ResourceMain.md&amp;value=---%0Auid%3A%20AltV.Net.Host.Host.UnloadArgs.ResourceMain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/2b4623569c00fd755c823762225d5a3f1937a31b/api/AltV.Net.Host/Host.cs/#L109">View Source</a>
-  </span>
-  <h4 id="AltV_Net_Host_Host_UnloadArgs_ResourceMain" data-uid="AltV.Net.Host.Host.UnloadArgs.ResourceMain">ResourceMain</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IntPtr ResourceMain</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><a class="xref" href="AltV.Net.Elements.Entities.IVehicle.html">IVehicle</a></td>
+        <td><span class="parametername">vehicle</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Host_Host_UnloadArgs_ResourcePath.md&amp;value=---%0Auid%3A%20AltV.Net.Host.Host.UnloadArgs.ResourcePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/2b4623569c00fd755c823762225d5a3f1937a31b/api/AltV.Net.Host/Host.cs/#L108">View Source</a>
-  </span>
-  <h4 id="AltV_Net_Host_Host_UnloadArgs_ResourcePath" data-uid="AltV.Net.Host.Host.UnloadArgs.ResourcePath">ResourcePath</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IntPtr ResourcePath</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td><a class="xref" href="AltV.Net.Elements.Entities.IPlayer.html">IPlayer</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">seat</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -149,10 +116,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Host_Host_UnloadArgs.md&amp;value=---%0Auid%3A%20AltV.Net.Host.Host.UnloadArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/new/master/apiSpec/new?filename=AltV_Net_Events_PlayerEnteringVehicleDelegate.md&amp;value=---%0Auid%3A%20AltV.Net.Events.PlayerEnteringVehicleDelegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/2b4623569c00fd755c823762225d5a3f1937a31b/api/AltV.Net.Host/Host.cs/#L105" class="contribution-link">View Source</a>
+                    <a href="https://github.com/FabianTerhorst/coreclr-module/blob/2b4623569c00fd755c823762225d5a3f1937a31b/api/AltV.Net/Events/Events.cs/#L36" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
