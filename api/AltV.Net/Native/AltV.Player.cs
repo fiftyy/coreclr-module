@@ -251,6 +251,12 @@ namespace AltV.Net.Native
             
             [DllImport(DllName, CallingConvention = NativeCallingConvention)]
             internal static extern void Player_ClearBloodDamage(IntPtr player);
+            
+            [DllImport(DllName, CallingConvention = NativeCallingConvention)]
+            internal static extern void Player_GetClothes(IntPtr player, byte component, ref Cloth cloth);
+            
+            [DllImport(DllName, CallingConvention = NativeCallingConvention)]
+            internal static extern void Player_SetClothes(IntPtr player, byte component, byte drawable, byte texture, byte palette);
         }
     }
 }

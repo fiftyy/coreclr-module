@@ -9,6 +9,7 @@
 #include <altv-cpp-api/SDK.h>
 #include "position.h"
 #include "rotation.h"
+#include "cloth.h"
 
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -150,6 +151,9 @@ EXPORT void Player_GetPositionCoords2(alt::IPlayer* player, float* position_x, f
 EXPORT void Player_SetNetworkOwner(alt::IPlayer* player, alt::IPlayer* networkOwnerPlayer, bool disableMigration);
 
 EXPORT void Player_ClearBloodDamage(alt::IPlayer* player);
+
+EXPORT void Player_GetClothes(alt::IPlayer* player, uint8_t component, cloth_t &cloth);
+EXPORT void Player_SetClothes(alt::IPlayer* player, uint8_t component, uint8_t drawable, uint8_t texture, uint8_t palette);
 #ifdef __cplusplus
 }
 #endif

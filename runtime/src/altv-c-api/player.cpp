@@ -416,3 +416,14 @@ void Player_SetNetworkOwner(alt::IPlayer* player, alt::IPlayer* networkOwnerPlay
 void Player_ClearBloodDamage(alt::IPlayer* player) {
     player->ClearBloodDamage();
 }
+
+void Player_GetClothes(alt::IPlayer* player, uint8_t component, cloth_t &cloth) {
+    auto playerCloth = player->GetClothes(component);
+    cloth.drawableId = playerCloth.drawableId;
+    cloth.textureId = playerCloth.textureId;
+    cloth.paletteId = playerCloth.paletteId;
+}
+
+void Player_SetClothes(alt::IPlayer* player, uint8_t component, uint8_t drawable, uint8_t texture, uint8_t palette) {
+    player->SetClothes(component, drawable, texture, palette);
+}
